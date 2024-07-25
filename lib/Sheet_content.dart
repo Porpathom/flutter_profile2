@@ -1,24 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile2/darwer.dart';
 import 'package:getwidget/getwidget.dart';
 
-class AboutPage extends StatefulWidget {
-  const AboutPage({super.key, required String title});
+class SheetContent extends StatefulWidget {
+  const SheetContent({super.key});
 
   @override
-  State<AboutPage> createState() => _AboutPageState();
+  State<SheetContent> createState() => _SheetContentState();
 }
 
-class _AboutPageState extends State<AboutPage> {
-  var items = List<String>.generate(20, (i) => 'Pathom $i');
-
+class _SheetContentState extends State<SheetContent> {
+  var items = List<String>.generate(50, (i) => 'List $i');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("My List"),
-      ),
-      drawer: const MyDrawer(),
       body: ListView.builder(
         itemCount: items.length,
         itemBuilder: (context, index) {
@@ -30,8 +24,8 @@ class _AboutPageState extends State<AboutPage> {
             ),
             child: GFListTile(
               titleText: items[index],
-              subTitleText: 'computer science',
-              icon: const Icon(Icons.favorite),
+              subTitleText: '',
+              icon: const Icon(Icons.adb),
             ),
           );
         },

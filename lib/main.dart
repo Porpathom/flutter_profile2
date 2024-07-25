@@ -42,7 +42,7 @@ class ProfileScreen extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      drawer: const MyDarwer(),
+      drawer: const MyDrawer(),
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -69,7 +69,7 @@ class ProfileScreen extends StatelessWidget {
                     child: CircleAvatar(
                       radius: 65,
                       backgroundImage: NetworkImage(
-                          'https://scontent.fubp1-1.fna.fbcdn.net/v/t39.30808-6/448129730_1438782420854477_933743081245996698_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHmoU2OuhGhYcIXVzpERlB1RyiOhIBbi-lHKI6EgFuL6SuB0LUC83CyMm-I7TQbZT7CiLSfq9MvL3Bs12c64laV&_nc_ohc=o3Pbdl3klEQQ7kNvgHPEuYJ&_nc_ht=scontent.fubp1-1.fna&oh=00_AYCC-RWlAhIpZ1Pbk9mWYN4FyAT03C26s8FI1GEJLhyRgg&oe=669325D6'),
+                          'https://scontent.fubp1-1.fna.fbcdn.net/v/t39.30808-6/448129730_1438782420854477_933743081245996698_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHmoU2OuhGhYcIXVzpERlB1RyiOhIBbi-lHKI6EgFuL6SuB0LUC83CyMm-I7TQbZT7CiLSfq9MvL3Bs12c64laV&_nc_ohc=DPQbwmuE7WIQ7kNvgFdwVcl&_nc_ht=scontent.fubp1-1.fna&oh=00_AYDp21-aKLFrMvlOML6g2QLbNWtw4o-HSU8vXzd6_sUWkQ&oe=66A59AD6'),
                     ),
                   ),
                 ),
@@ -174,7 +174,7 @@ class ProfileScreen extends StatelessWidget {
                       const Center(child: SizedBox(height: 24)),
                       ElevatedButton(
                         onPressed: () {
-                          Get.to(const About(
+                          Get.to(const AboutPage(
                             title: 'About',
                           ));
                         },

@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_profile2/about.dart';
+import 'package:flutter_profile2/bottom_sheet.dart';
 import 'package:flutter_profile2/main.dart';
-import 'package:get/get.dart';
+import 'package:flutter_profile2/mix.dart';
+import 'package:get/route_manager.dart';
+import 'package:flutter_profile2/about.dart';
+import 'package:flutter_profile2/grid.dart';
 
-class MyDarwer extends StatefulWidget {
-  const MyDarwer({super.key});
+class MyDrawer extends StatefulWidget {
+  const MyDrawer({super.key});
 
   @override
-  State<MyDarwer> createState() => _MyDarwerState();
+  State<MyDrawer> createState() => _MyDrawerState();
 }
 
-class _MyDarwerState extends State<MyDarwer> {
+class _MyDrawerState extends State<MyDrawer> {
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -25,22 +28,36 @@ class _MyDarwerState extends State<MyDarwer> {
             decoration: BoxDecoration(
               color: Colors.blue,
             ),
-            child: Text('Drawer Header'),
+            child: Text('My App'),
           ),
           ListTile(
-            title: const Text('My App'),
+            title: const Text('Home'),
             onTap: () {
-              // Update the state of the app.
-              // ...
-              Get.to(MyApp(title: "Home"));
+              Get.to(const ProfileScreen(title: "My App"));
             },
           ),
           ListTile(
-            title: const Text('About Me'),
+            title: const Text('List View'),
             onTap: () {
-              // Update the state of the app.
-              // ...
-              Get.to(const About(title: "About Me"));
+              Get.to(const AboutPage(title: 'List View',));
+            },
+          ),
+          ListTile(
+            title: const Text('Gird View'),
+            onTap: () {
+              Get.to(const GridPage());
+            },
+          ),
+          ListTile(
+            title: const Text('Mix View'),
+            onTap: () {
+              Get.to(const CombinedPage());
+            },
+          ),
+          ListTile(
+            title: const Text('Bottom View'),
+            onTap: () {
+              Get.to(const MyBottomSheet());
             },
           ),
         ],
